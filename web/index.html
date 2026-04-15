@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMS Dispatch</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Notification Overlay -->
+        <div id="notification-container"></div>
+
+        <!-- History Tablet UI -->
+        <div id="history-modal" class="hidden">
+            <div class="modal-bg"></div>
+            <div class="tablet-frame">
+                <div class="tablet-screen">
+                    <!-- Sidebar -->
+                    <div class="sidebar">
+                        <div class="brand">
+                            <i class="fas fa-tower-broadcast"></i>
+                            <span>DISPATCH</span>
+                        </div>
+                        <div class="nav-item active">
+                            <i class="fas fa-list-ul"></i>
+                            <span>All Calls</span>
+                        </div>
+                        <div class="sidebar-footer">
+                            <div class="online-indicator">
+                                <span class="pulse"></span>
+                                SYSTEM ONLINE
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Content -->
+                    <div class="main-content">
+                        <header>
+                            <div class="header-info">
+                                <h1>Clinical Response Feed</h1>
+                                <p>Monitoring Medical Radio Frequencies</p>
+                            </div>
+                            <div class="header-actions">
+                                <button id="close-history" class="close-btn"><i class="fas fa-times"></i></button>
+                            </div>
+                        </header>
+
+                        <div class="history-list no-scrollbar" id="call-history-list">
+                            <!-- Calls will be injected here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
